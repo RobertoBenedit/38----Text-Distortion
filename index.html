@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text Distortion</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <section class="section_1">
+                <button>BETO</button>
+            </section>
+            <section class="section_2">
+                <button>BETO</button>
+            </section>
+        </div>
+        <svg>
+            <filter id="smudged">
+                <feTurbulence
+                    baseFrequency="0.3 0.3"
+                    numOctaves="2"
+                    seed="20"
+                />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" />
+            </filter>
+        </svg>
+
+        <script src="app.js"></script>
+    </body>
+</html>
